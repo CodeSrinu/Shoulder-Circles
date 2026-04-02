@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 640037981}
   - component: {fileID: 640037980}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: Planet-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4ca7aa96006c4404d8d5223a93880af2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 900331737}
   - component: {fileID: 900331736}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Planet-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -591,7 +591,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 09c1ff08d9514234ea4d03420268624a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 979689230}
   - component: {fileID: 979689229}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Planet-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
