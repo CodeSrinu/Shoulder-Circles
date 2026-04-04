@@ -21,6 +21,7 @@ public class ShipInputController : MonoBehaviour
     {
        HandleRadiusInput();
        MoveShip();
+       CheckForNearPlanet();
 
     }
 
@@ -58,22 +59,33 @@ public class ShipInputController : MonoBehaviour
 
     void CheckForNearPlanet()
     {
-        foreach( Planet planet in allPlanets)
-        {
-            float distance = Vector3.Distance(transform.position,planet.transform.position);
+        Planet nearestPlanet = null;
+        float nearestDistance = Mathf.Infinity;
 
-            if (distance<switchDistance && planet != currentPlanet)
+        foreach (Planet planet in allPlanets)
+        {
+            if (planet == currentPlanet) continue;
+
+            float distance = Vector3.Distance(transform.position, planet.transform.position);
+
+            if (distance < switchDistance && distance < nearestDistance)
             {
-                SwitchToPlanet(planet);
+                nearestDistance = distance;
+                nearestPlanet = planet;
             }
         }
-    }
 
+        if (nearestPlanet != null)
+        {
+            SwitchToPlanet(nearestPlanet);
+        }
+    }
     void SwitchToPlanet(Planet planet)
     {
         currentPlanet = planet;
         orbitRadius = planet.orbitRadius; 
         CurrentAngle = 0f; 
         Debug.Log("Now orbiting: " + planet.gameObject.name);
+        CamSwitch.instance.SwitchCamToPlanet(planet);
     }
 }

@@ -1,29 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class CamSwitch : MonoBehaviour
 {
-    Camera mainCam;
-
-
+    public static CamSwitch instance;
+    public Vector3 offset = new Vector3(0, 3, -6);
     private void Awake()
     {
-        mainCam = GetComponent<Camera>();
         instance = this;
     }
-
-
-    public static CamSwitch instance;
-
     public void SwitchCamToPlanet(Planet planet)
     {
-        Transform planetTf = planet.gameObject;
-
-        Vector3 lookDir = (transform.position - planetTf.transform.position).normalized;
-
-        transform.LookAt(lookDir);
-
-
+        Transform planetTf = planet.transform;
+        transform.position = planetTf.position + offset;
+        transform.LookAt(planetTf.position);
     }
 }
