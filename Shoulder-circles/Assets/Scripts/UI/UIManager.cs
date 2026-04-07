@@ -22,10 +22,10 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        // if (startButton) startButton.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowDifficultySelection(); });
-        // if (beginnerBtn) beginnerBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowHUD(); audioManager.StartMusic(); });
-        // if (moderateBtn) moderateBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowHUD(); audioManager.StartMusic(); });
-        // if (expertBtn) expertBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowHUD(); audioManager.StartMusic(); });
+        if (startButton) startButton.onClick.AddListener(() => { /*audioManager.PlayButtonClick();*/ ShowDifficultySelection(); });
+        if (beginnerBtn) beginnerBtn.onClick.AddListener(() => {/* audioManager.PlayButtonClick();*/ ShowHUD(); /*audioManager.StartMusic(); */});
+        if (moderateBtn) moderateBtn.onClick.AddListener(() => { /*audioManager.PlayButtonClick();*/ ShowHUD(); /*audioManager.StartMusic(); }*/});
+        if (expertBtn) expertBtn.onClick.AddListener(() => { /*audioManager.PlayButtonClick();*/ ShowHUD();/* audioManager.StartMusic(); */});
         // if (leaderboardNxtBtn) leaderboardNxtBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowAnalyticsStats(); });
         // if (analyticsNxtBtn) analyticsNxtBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); ShowAnalyticsGraph(); });
         // if (graphNxtBtn) graphNxtBtn.onClick.AddListener(() => { audioManager.PlayButtonClick(); Restart(); });
@@ -50,13 +50,13 @@ public class UIManager : MonoBehaviour
             ShowGameOver();
             break;
         }
-        
-        
+
     }
+
 
     public void UpdateScore(float score)
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score.ToString("F0");
     }
 
     private void HideAll()
