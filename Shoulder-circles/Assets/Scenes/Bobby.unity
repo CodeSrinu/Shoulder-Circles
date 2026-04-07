@@ -1244,7 +1244,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1281,16 +1281,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitRadius: 3
-  minOrbitRadius: 1
-  maxOrbitRadius: 10
-  radiusChangeRate: 1
-  OrbitSpeed: 1
-  switchDistance: 5
-  currentPlanet: {fileID: 0}
+  OrbitSpeed: 0.5
   allPlanets:
   - {fileID: 1188271038}
   - {fileID: 2079648128}
   - {fileID: 1281911888}
+  switchDistance: 5
+  radiusChangeRate: 0.5
+  minOrbitRadius: 1
+  maxOrbitRadius: 5
 --- !u!65 &1419863580
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1360,7 +1359,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1426,7 +1425,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
