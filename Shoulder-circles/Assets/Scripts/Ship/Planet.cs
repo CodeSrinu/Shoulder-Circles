@@ -57,7 +57,7 @@ public class Planet : MonoBehaviour
         if (other.CompareTag("SpaceShip"))
         {
             ResetRadius();
-            Debug.Log("Ship left planet → Reset radius");
+            Debug.Log(" Reset radius");
         }
     }
     void ResetRadius()
